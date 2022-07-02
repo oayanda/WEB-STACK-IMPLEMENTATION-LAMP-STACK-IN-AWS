@@ -125,9 +125,23 @@
 ![MySql server](./images/05.png)
 
 5. Now let's view our website in the browser
-- View with Public Ip
+- View with Public IP
 - `http://52.87.225.72:80`
 ![MySql server](./images/06.png)
 
 - view with Public DNS
 ![MySql server](./images/07.png)
+
+ #### **Step Six -** Enable/Test PHP on the website
+
+ 1. Let's change the order of precedence - making index.php take precedence over index.html
+
+`sudo vim /etc/apache2/mods-enabled/dir.conf`
+
+ ![MySql server](./images/08.png)
+
+2. Let's change the order of precedence - making index.php take precedence over index.html
+
+`sudo vim /etc/apache2/mods-enabled/dir.conf`
+
+ ![MySql server](./images/08.png)
