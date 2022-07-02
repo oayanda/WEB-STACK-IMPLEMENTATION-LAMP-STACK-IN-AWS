@@ -15,19 +15,24 @@
 1. **Use the apt command - update all packages and install apache2 package** 
 
 `sudo apt update`
-![apt update](./images/11.png)
+
+![apt update](./images/10.png)
+
 `sudo apt install apache2`
+
 ![install apache2`](./images/11.png)
 
 
 2. **Verify Apache2 service is running.**
 
 `sudo systemctl status apache2`
+
 ![Apache2 running](./images/12.png)
 
 2. **Now access the installed apache2 server locally .**
 
 ` curl http://127.0.0.1:80`
+
 ![Apache2 running locally](./images/13.png)
 
 3. **Confirm the Apache2 server is accesiable in the browser. - Make sure the security group allows but tcp and ssh remote connection**
@@ -35,16 +40,38 @@
 ` http://52.73.55.62:80` - in the browser or 
 
 `curl -s http://52.73.55.62:80` - via the remote connection
+
 ![Apache2 running locally](./images/14.png)
 
 
 ####  Step Three - Time to install the MySql database  on the Apache server.
-1. **Use the apt command - update all packages and install apache2 package** 
+1. ** install MySql Server package** 
 
 `sudo apt install mysql-server`
+
 ![MySql server](./images/15.png)
 
-2. **Log into the install MqSql console.**
+2. **Log into the install MySql console.**
 
 `sudo mysql`
+
 ![Login in Mysql Console](./images/16.png)
+
+2. **Aasign a password *PassWord.1* to Admin User ROOT and exit.**
+
+`ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';`
+
+![Password](./images/17.png) 
+
+2. **Start an interactive script. - The process allows default logins and database to be removed for better security**
+
+`sudo mysql_secure_installation`
+
+![Password](./images/18.png) 
+
+####  Step Four - Time to install the MySql database  on the Apache server.
+1. ** install MySql Server package** 
+
+`sudo apt install mysql-server`
+
+![MySql server](./images/15.png)
