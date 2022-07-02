@@ -140,8 +140,17 @@
 
  ![MySql server](./images/08.png)
 
-2. Let's change the order of precedence - making index.php take precedence over index.html
+2. Let's creat a php script to test - save as index.php
 
-`sudo vim /etc/apache2/mods-enabled/dir.conf`
+`vim /var/www/projectlamp/index.php`
 
- ![MySql server](./images/08.png)
+ ![](./images/09.png)
+
+3. Refresh your web page
+
+ ![](./images/001.png)
+
+4. For security reason, is good to remove this file
+
+`sudo rm /var/www/projectlamp/index.php`
+ ![](./images/002.png)g
