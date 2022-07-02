@@ -15,4 +15,5 @@
 1. **Use the apt command - update all packages and install apache2 package** 
 
 `sudo apt update`
+
 `sudo apt install apache2`
