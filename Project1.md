@@ -69,9 +69,16 @@
 
 ![Password](./images/18.png) 
 
-####  Step Four - Time to install the MySql database  on the Apache server.
-1. ** install MySql Server package** 
+####  Step Four - Time to install Php.
+1. **Three PHP packages would be require** 
+- Php package
+- php-mysql package - communication with MySql
+- libapache2-mod-php - php communication with Apache2 server
 
-`sudo apt install mysql-server`
+`sudo apt install php php-mysql libapache2-mod-php`
 
-![MySql server](./images/15.png)
+![MySql server](./images/20.png)
+
+####  All LAMP Components are now on and runnning.
+
+#### Test the setup - Configure a Apache Virtual Host to host our web application which would serve client computers.
