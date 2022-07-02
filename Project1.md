@@ -1,18 +1,17 @@
-####  Step One - Spin up a AWS instance - This is the virtual hardware on which LAMP would be implemented.
+####  **Step One** - Spin up a AWS instance - This is the virtual hardware on which LAMP would be implemented.
 1. **Login into your AWS** 
 2. **Lunch your Ec2 instance type.**
 ![EC2 instance](./images/1.png)
-3. **One instance is good enough and selected**
-![EC2 instance](./images/2.png)
-4. **Use the default settings.**
+
+3. **Use the default settings.**
 ![EC2 instance](./images/3.png)
-5. **Configure Security Group, generate a key pair and lunch.**
+4. **Configure Security Group, generate a key pair and lunch.**
 ![EC2 instance](./images/5.png)
-6. **ssh into aws from windows terminal.**
+5. **ssh into aws from windows terminal.**
 ![EC2 instance](./images/6.png)
 
-####  Step Two - Installing Apache and updating the firewall
-1. **Use the apt command - update all packages and install apache2 package** 
+####  **Step Two** - Installing Apache and updating the firewall
+1. Use the apt command - update all packages and install apache2 package.
 
 `sudo apt update`
 
@@ -23,19 +22,19 @@
 ![install apache2`](./images/11.png)
 
 
-2. **Verify Apache2 service is running.**
+2. Verify Apache2 service is running.
 
 `sudo systemctl status apache2`
 
 ![Apache2 running](./images/12.png)
 
-2. **Now access the installed apache2 server locally .**
+3. Now let's access the installed apache2 server locally .
 
 ` curl http://127.0.0.1:80`
 
 ![Apache2 running locally](./images/13.png)
 
-3. **Confirm the Apache2 server is accesiable in the browser. - Make sure the security group allows both tcp and ssh remote connection**
+3. Confirm the Apache2 server is accessible in the browser. - Make sure the security group allows both tcp and ssh remote connection.
 
 ` http://52.73.55.62:80` - in the browser or 
 
@@ -44,32 +43,32 @@
 ![Apache2 running locally](./images/14.png)
 
 
-####  Step Three - Time to install the MySql database  on the Apache server.
-1. ** install MySql Server package** 
+####  **Step Three** - Time to install the MySql database  on the Apache server.
+1. install MySql Server package
 
 `sudo apt install mysql-server`
 
 ![MySql server](./images/15.png)
 
-2. **Log into the install MySql console.**
+2. Log into the install MySql console.
 
 `sudo mysql`
 
 ![Login in Mysql Console](./images/16.png)
 
-2. **Aasign a password *PassWord.1* to Admin User ROOT and exit.**
+3. Aasign a password *PassWord.1* or any strong password to Admin User ROOT and exit.
 
 `ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';`
 
 ![Password](./images/17.png) 
 
-2. **Start an interactive script. - The process allows default logins and database to be removed for better security**
+4. Start an interactive script. - The process allows default logins and database to be removed for better security
 
 `sudo mysql_secure_installation`
 
 ![Password](./images/18.png) 
 
-####  Step Four - Time to install Php.
+####  **Step Four** - Time to install Php.
 1. **Three PHP packages would be require** 
 - Php package
 - php-mysql package - communication with MySql
@@ -81,9 +80,11 @@
 
 ####  All LAMP Components are now up and runnning.
 
+
  #### **Step Five -** Test the setup - Configure a Apache Virtual Host to host our web application which would serve client computers.
 
- 1. Create a domain "projectlamp" under the /www directory and assign ownership to your currect system user
+
+ 1. Create a custom domain "projectlamp" under the /www directory and assign ownership to your currect system user.
 
 `sudo mkdir /var/www/projectlamp`
 
@@ -140,7 +141,7 @@
 
  ![MySql server](./images/08.png)
 
-2. Let's creat a php script to test - save as index.php
+2. Let's create a php script to test - save as index.php
 
 `vim /var/www/projectlamp/index.php`
 
@@ -153,4 +154,4 @@
 4. For security reason, is good to remove this file
 
 `sudo rm /var/www/projectlamp/index.php`
- ![](./images/002.png)g
+ ![](./images/002.png)
