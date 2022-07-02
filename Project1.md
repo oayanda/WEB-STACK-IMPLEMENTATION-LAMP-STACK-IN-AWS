@@ -7,9 +7,12 @@
 4. **Use the default settings.**
 ![EC2 instance](./images/3.png)
 5. **Configure Security Group, generate a key pair and lunch.**
-![EC2 instance](./images/4.png)
+![EC2 instance](./images/5.png)
 6. **ssh into aws from windows terminal.**
 ![EC2 instance](./images/6.png)
 
 ####  Step Two - Installing Apache and updating the firewall
-1. **Login into your AWS** 
+1. **Use the apt command - update all packages and install apache2 package** 
+
+`sudo apt update`
+`sudo apt install apache2`
