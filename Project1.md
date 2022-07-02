@@ -30,8 +30,21 @@
 ` curl http://127.0.0.1:80`
 ![Apache2 running locally](./images/13.png)
 
-3. **Confirm the Apache2 server is accesiable in the browser. - Make sure the security allows but tcp and ssh remote connection**
+3. **Confirm the Apache2 server is accesiable in the browser. - Make sure the security group allows but tcp and ssh remote connection**
 
-` http://52.73.55.62:80`
+` http://52.73.55.62:80` - in the browser or 
+
+`curl -s http://52.73.55.62:80` - via the remote connection
 ![Apache2 running locally](./images/14.png)
 
+
+####  Step Three - Time to install the MySql database  on the Apache server.
+1. **Use the apt command - update all packages and install apache2 package** 
+
+`sudo apt install mysql-server`
+![MySql server](./images/15.png)
+
+2. **Log into the install MqSql console.**
+
+`sudo mysql`
+![Login in Mysql Console](./images/16.png)
