@@ -1,5 +1,5 @@
 # WEB-STACK-IMPLEMENTATION-LAMP-STACK-IN-AWS
-### In this project, I would show you the detailed steps on how to implemented a LAMP STACK in AWS.
+###This project, shows steps on how to implemented a LAMP STACK in AWS.
 #### This means **L**inux - **A**pache - **M**ySql - **P**hp would be implemented and configured on a AWS Ec2 virtual machine which would host the web application.
 
 
