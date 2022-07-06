@@ -13,13 +13,14 @@
 ####  **Step Two** - Installing Apache and updating the firewall
 1. Use the apt command - update all packages and install apache2 package.
 
-``bash
+```bash
 sudo apt update
 ```
+
 ![apt update](./images/10.png)
 
 
-``bash
+```bash
 sudo apt install apache2
 ```
 
